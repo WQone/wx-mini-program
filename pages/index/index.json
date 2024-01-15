@@ -1,0 +1,8 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "tip-dialog": "../../components/TipDialog",
+    "loading-custom": "../../components/LoadingCustom",
+    "animation-box": "../../components/AnimationBox"
+  }
+}

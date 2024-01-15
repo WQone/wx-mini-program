@@ -1,0 +1,6 @@
+<view style="height:{{windowHeight}}px;" class="mask">
+  <view class="loader1">
+    <i />
+    <i />
+  </view>
+</view>

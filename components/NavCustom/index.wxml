@@ -1,0 +1,15 @@
+<view class="cu-bar fixed bar_white" style="height:{{CustomBar}}px;{{bgColor}}">
+  <block wx:if="{{!isCustom}}">
+    <view class="action" wx:if="{{isBack}}" data-gotype="{{gotype}}" bindtap="BackPage">
+      <view wx:if="{{ gotype=='page' }}" class="icon iconfont icon-a-Frame427319418"></view>
+      <view wx:elif="{{ gotype=='home' }}" class="home iconfont icon-shouye"></view>
+    </view>
+    <view class="content" style="top:{{StatusBar}}px;color: {{textColor}};">
+      <text>{{title}}</text>
+      <slot name="content"></slot>
+    </view>
+  </block>
+  <block>
+    <slot name="custom"></slot>
+  </block>
+</view>

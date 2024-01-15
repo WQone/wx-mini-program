@@ -1,0 +1,18 @@
+/**app.wxss**/
+@import 'assets/icon/icon.wxss';
+@import 'assets/icon/svg.wxss';
+@import 'assets/font/stylesheet.wxss';
+
+.SSQuPaoShouXieTi-family {
+  font-family: '099-SSQuPaoShouXieTi';
+}
+
+page {
+  height: 100vh;
+  width: 100vw;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  position: relative;
+  color: #212121;
+  overflow-x: hidden;
+}

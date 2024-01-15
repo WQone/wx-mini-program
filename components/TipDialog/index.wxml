@@ -1,0 +1,16 @@
+<view class="cu-modal {{ isShow ? 'show':'' }}" bindtap="_closeDialog" catchtouchmove="_myCatchTouch">
+  <view class="cu-dialog tip_modal_dialog" catchtap='_mycatchtap'>
+    <view class="dialog_content">
+      <image src="../../assets/images/sel_xz.png" class="img_hd" />
+      <view class="nav">
+        <view class="nav-li {{activeId == index ?'active':''}}" wx:for="{{navData}}" bindtap="tipNavCilck" wx:key="astroid" data-index="{{index}}">
+          <view class="SSQuPaoShouXieTi-family title">{{item.astroname}}</view>
+          <view class="date">{{item.date}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="foot_button" bindtap="_closeDialog">
+      <iconfont name="guanbi" size="34" color="white" />
+    </view>
+  </view>
+</view>

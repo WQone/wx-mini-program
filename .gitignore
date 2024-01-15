@@ -1,0 +1,5 @@
+node_modules
+package-lock.json
+project.private.config.json
+release.config.js
+trial.config.js

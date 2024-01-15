@@ -1,0 +1,16 @@
+<view class="gift">
+  <view class="gift__bow">
+    <view class="gift__bow-left"></view>
+    <view class="gift__bow-right"></view>
+    <view class="gift__bow-center"></view>
+  </view>
+  <view class="gift__box">
+    <view class="gift__lid-shadow"></view>
+  </view>
+  <view class="gift__lid"></view>
+  <view class="gift__star gift__star--1"></view>
+  <view class="gift__star gift__star--2"></view>
+  <view class="gift__star gift__star--3"></view>
+  <view class="gift__star gift__star--4"></view>
+  <view class="gift__star gift__star--5"></view>
+</view>

@@ -1,0 +1,61 @@
+<view class="container_index">
+  <loading-custom wx:if="{{loading}}"></loading-custom>
+  <!-- 弹框 -->
+  <tip-dialog id="tip-dialog" navData="{{starNavData}}" bind:pickerChange="changeStar"></tip-dialog>
+  <!-- 顶部导航栏 -->
+  <nav-custom title="星座运势" bgColor="background-color: rgba(115, 90, 253, {{navOpacity}});" textColor="white"></nav-custom>
+  <view class="main_top">
+    <image src="../../assets/images/bg_t.png" mode="widthFix" />
+  </view>
+  <view class="main_body">
+    <view class="header">
+      <view class="header_left">
+        <iconfont class="img" name="{{starNavData[starActiveIndex].icon}}" size="86" />
+        <view class="title">
+          <view class="fir">{{starNavData[starActiveIndex].astroname}}</view>
+          <view class="sub">{{starNavData[starActiveIndex].date}}</view>
+        </view>
+      </view>
+      <view class="header_right iconA" bindtap="tipCilck"></view>
+    </view>
+    <view class="navtab">
+      <view class="navtab_li {{dateActiveIndex == index ?'active':''}}" wx:for="{{dateNavData}}" wx:for-index="index" bindtap="changeDate" wx:key="key" data-index="{{index}}">
+        {{item.name}}
+      </view>
+      <view class="star_date">
+        <view>{{starInfo.vdate}}</view>
+      </view>
+    </view>
+    <view class="star_content">
+      <view class="star_desc">
+        <text>{{starInfo.desc}}</text>
+      </view>
+      <view class="star_content_li" wx:for="{{starInfo.index}}" wx:key="index">
+        <text class="li_label">{{item.t}}</text>
+        <view class="li_val">
+          <block wx:if="{{item.s}}">
+            <block wx:for="{{5}}" wx:key="*this" wx:for-item="itemChild">
+              <view class="iconfont icon-pingfen {{item.s >= itemChild + 1 ? 'yellow' : ''}}"></view>
+            </block>
+          </block>
+          <block wx:else>{{item.v || '-'}}</block>
+        </view>
+      </view>
+      <view class="share_btn" bindtap="showAd">
+        <animation-box></animation-box>
+      </view>
+    </view>
+    <view class="star_textbox_ul">
+      <block wx:for="{{starInfo.content}}" wx:key="index">
+        <view class="star_textbox" animation="{{item.animation}}">
+          <view class="star_textbox_title">
+            <text>{{item.t}}</text>
+          </view>
+          <view class="star_textbox_li">{{item.v}}</view>
+        </view>
+      </block>
+    </view>
+    <ad unit-id="adunit-4beff9d2a32f3af1" ad-intervals="30" />
+    <official-account style="width:100%;height:188rpx;"></official-account>
+  </view>
+</view>

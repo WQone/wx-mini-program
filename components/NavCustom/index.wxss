@@ -1,0 +1,129 @@
+/* 导航栏 */
+/* .cu-custom {
+  display: block;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cu-custom .cu-bar .content {
+  width: calc(100% - 440rpx);
+} */
+
+.cu-bar .action {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  max-width: 100%;
+  min-width: 80rpx;
+}
+
+.cu-bar .content {
+  position: absolute;
+  text-align: center;
+  width: calc(100% - 340rpx);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  height: 60rpx;
+  font-size: 32rpx;
+  line-height: 60rpx;
+  cursor: none;
+  pointer-events: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+.cu-custom .cu-bar .content image {
+  height: 60rpx;
+  width: 240rpx;
+}
+
+.cu-custom .cu-bar {
+  min-height: 0px;
+  box-shadow: 0rpx 0rpx 0rpx;
+  z-index: 9999;
+  display: flex;
+  padding: 0 24rpx;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+
+.cu-custom .cu-bar .border-custom {
+  position: relative;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 1000rpx;
+  height: 30px;
+}
+
+.cu-custom .cu-bar .border-custom::after {
+  content: ' ';
+  width: 200%;
+  height: 200%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  border: 1rpx solid var(--white);
+  opacity: 0.5;
+}
+
+.cu-custom .cu-bar .border-custom::before {
+  content: ' ';
+  width: 1rpx;
+  height: 110%;
+  position: absolute;
+  top: 22.5%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: scale(0.5);
+  transform-origin: 0 0;
+  pointer-events: none;
+  box-sizing: border-box;
+  opacity: 0.6;
+  background-color: var(--white);
+}
+
+.cu-custom .cu-bar .border-custom text {
+  display: block;
+  flex: 1;
+  margin: auto !important;
+  text-align: center;
+  font-size: 34rpx;
+}
+
+.cu-bar.fixed,
+.nav.fixed {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1024;
+}
+.cu-custom .bar_white {
+  color: var(--text-title);
+  background-color: #ffffff;
+  font-size: 34rpx;
+  font-weight: 500;
+  text-align: center;
+}
+
+.cu-custom .icon {
+  font-size: 44rpx;
+  transform: rotate(180deg);
+  background-size: 100% 100%;
+}
+
+.cu-custom .home {
+  font-size: 44rpx;
+  background-size: 100% 100%;
+}

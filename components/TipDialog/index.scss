@@ -1,0 +1,73 @@
+@import 'assets/style/dialog.scss';
+.tip_modal_dialog {
+  vertical-align: top;
+  margin-top: 26vh;
+  margin-left: 0rpx;
+  margin-right: 0rpx;
+  width: auto;
+
+  .dialog_content {
+    padding: 36rpx 32rpx 36rpx;
+    border-radius: 0 0 28rpx 28rpx;
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 30%);
+    position: relative;
+    .img_hd {
+      position: absolute;
+      top: -76rpx;
+      left: 0;
+      width: 100%;
+      height: 80rpx;
+      image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      .nav-li {
+        font-size: 24rpx;
+        word-break: keep-all;
+        width: 33%;
+        margin-bottom: 50rpx;
+        padding: 10rpx 0;
+        color: rgb(0, 0, 0, 0.8);
+        position: relative;
+        -webkit-text-stroke-width: 2rpx;
+        -webkit-text-stroke-color: rgba(0, 0, 0, 0.3);
+        .title {
+          font-size: 48rpx;
+          font-weight: bold;
+        }
+        .date {
+          margin-top: 4rpx;
+        }
+        &.active {
+          color: #735afd;
+          -webkit-text-stroke-width: 2rpx;
+          -webkit-text-stroke-color: rgba(115, 90, 253, 0.3);
+          &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: -2rpx;
+            height: 6rpx;
+            background: #735afd;
+            opacity: 0.8;
+            margin: auto;
+            width: 80rpx;
+            border-radius: 8rpx;
+          }
+        }
+      }
+    }
+  }
+
+  .foot_button {
+    padding: 30rpx 0 0;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+  }
+}
